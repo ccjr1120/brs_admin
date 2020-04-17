@@ -4,6 +4,8 @@ import store from './store'
 import router from './router'
 import ElementUI from 'element-ui'
 import './styles.scss'
+import './assets/style/common.css'
+
 
 Vue.use(ElementUI)
 
