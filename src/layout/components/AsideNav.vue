@@ -9,35 +9,27 @@
         :collapse="navDisplay"
         router
       >
+        <el-menu-item index="/">
+          <i class="el-icon-house"></i>
+          <span slot="title">首页</span>
+        </el-menu-item>
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
-            <span>导航一</span>
+            <i class="el-icon-coordinate"></i>
+            <span>审核</span>
           </template>
           <el-menu-item-group>
-            <template slot="title">分组一</template>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
+            <el-menu-item index="/test2">书籍审核</el-menu-item>
+            <el-menu-item index="/">推荐审核</el-menu-item>
           </el-menu-item-group>
-          <el-menu-item-group title="分组2">
-            <el-menu-item index="1-3">选项3</el-menu-item>
-          </el-menu-item-group>
-          <el-submenu index="1-4">
-            <template slot="title">选项4</template>
-            <el-menu-item index="1-4-1">选项1</el-menu-item>
-          </el-submenu>
         </el-submenu>
-        <el-menu-item index="/test2">
-          <i class="el-icon-menu"></i>
-          <span slot="title">导航二</span>
-        </el-menu-item>
         <el-menu-item index="/">
-          <i class="el-icon-document"></i>
-          <span slot="title">导航三</span>
+          <i class="el-icon-user"></i>
+          <span slot="title">用户列表</span>
         </el-menu-item>
         <el-menu-item index="4">
-          <i class="el-icon-setting"></i>
-          <span slot="title">导航四</span>
+          <i class="el-icon-reading"></i>
+          <span slot="title">书籍列表</span>
         </el-menu-item>
       </el-menu>
     </el-aside>
@@ -72,6 +64,7 @@ export default {
 }
 .el-aside {
   height: 100%;
-  width: auto!important;
+  width: auto !important;
 }
+.el-aside ul{top:0px !important;}
 </style>
