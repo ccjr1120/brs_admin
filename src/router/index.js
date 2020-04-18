@@ -8,7 +8,20 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Layout
+    redirect:'/test',
+    component: Layout,
+    children:[
+      {
+        path:'test',
+        name:'test1',
+        component:()=>import('@/views/test/index')
+      },
+      {
+        path:'test2',
+        name:'test2',
+        component:()=>import('@/views/test2/index')
+      }
+    ]
   },
   // {
   //   path: '/about',
