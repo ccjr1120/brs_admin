@@ -7,19 +7,39 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    redirect:'/test',
+    name: '首页',
+    redirect:'/dashboard',
     component: Layout,
     children:[
       {
-        path:'test',
-        name:'test1',
-        component:()=>import('@/views/test/index')
+        path:'dashboard',
+        name:'数据图',
+        component:()=>import('@/views/dashboard/index')
       },
       {
-        path:'test2',
-        name:'test2',
-        component:()=>import('@/views/test2/index')
+        path:'book',
+        name:'书籍列表',
+        component:()=>import('@/views/book/list')
+      },
+      {
+        path:'book/review',
+        name:'待审核书籍',
+        component:()=>import('@/views/book/review')
+      },
+      {
+        path:'user',
+        name: '用户列表',
+        component:()=>import('@/views/user/list.vue')
+      },
+      {
+        path:'user/recommend',
+        name:'推荐列表',
+        component:()=>import('@/views/user/recommend/list')
+      },
+      {
+        path:'user/recommend/review',
+        name:'待审核列表',
+        component:()=>import('@/views/user/recommend/list')
       }
     ]
   },

@@ -15,22 +15,27 @@
         </el-menu-item>
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-coordinate"></i>
-            <span>审核</span>
+            <!-- <i class="el-icon-coordinate"></i> -->
+            <i class="el-icon-user" />
+            <span>用户</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="/test2">书籍审核</el-menu-item>
-            <el-menu-item index="/">推荐审核</el-menu-item>
+            <el-menu-item index="/user">用户列表</el-menu-item>
+            <el-menu-item index="/user/recommend">推荐列表</el-menu-item>
+            <el-menu-item index="/user/recommend/review">待审核推荐</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
-        <el-menu-item index="/">
-          <i class="el-icon-user"></i>
-          <span slot="title">用户列表</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <i class="el-icon-reading"></i>
-          <span slot="title">书籍列表</span>
-        </el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">
+            <!-- <i class="el-icon-coordinate"></i> -->
+            <i class="el-icon-reading" />
+            <span>书籍</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="/book">书籍列表</el-menu-item>
+            <el-menu-item index="/book/review">待审核书籍</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
       </el-menu>
     </el-aside>
     <AppHeader v-on:change="changeNav"></AppHeader>
@@ -66,5 +71,7 @@ export default {
   height: 100%;
   width: auto !important;
 }
-.el-aside ul{top:0px !important;}
+.el-aside ul {
+  top: 0px !important;
+}
 </style>

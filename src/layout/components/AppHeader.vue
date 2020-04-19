@@ -13,7 +13,8 @@
           >{{item.name}}</el-breadcrumb-item>
         </el-breadcrumb>
         <el-breadcrumb v-else separator-class="el-icon-arrow-right">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+          <el-breadcrumb-item>首页</el-breadcrumb-item>
+          <el-breadcrumb-item>数据图</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
       <div class="avatar">
