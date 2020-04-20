@@ -1,0 +1,68 @@
+//保留其有可能美化的方向
+<template>
+  <div style="width:80%;">
+    <el-card v-for="(data, index) in appDailyData" :key="index" class="box-card">
+      <div class="card-left">
+        <svg class="icon" aria-hidden="true">
+          <use :xlink:href="dataIconList[index]" />
+        </svg>
+      </div>
+      <div class="card-right">
+        {{data.name}}
+        <br />
+        {{data.number}}
+      </div>
+    </el-card>
+  </div>
+</template>
+
+<script>
+import "@/assets/icon/iconfont.js";
+export default {
+  data() {
+    return {
+      dataIconList: ["#icon-user", "#icon-book", "#icon-recommend"],
+      appDailyData: [
+        {
+          name: "新增用户",
+          number: 101110
+        },
+        {
+          name: "新增书籍",
+          number: "1123"
+        },
+        {
+          name: "新增推荐",
+          number: "1131"
+        }
+      ]
+    };
+  }
+};
+</script>
+
+<style>
+.box-card {
+  width: 25%;
+  float: left;
+  margin: 10px 20px 0px 20px;
+}
+.icon {
+  width: 50px;
+  height: 58px;
+  fill: currentColor;
+  overflow: hidden;
+  margin: 5px;
+}
+.card-left {
+  float: left;
+  width: 30%;
+}
+.card-right {
+  /* float: left; */
+  font-size: 20px;
+  width: 40%;
+  overflow:hidden;
+  text-align: center;
+}
+</style>
